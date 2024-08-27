@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Encriptador de texto</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Encriptador de texto</h1>
+    </header>
+    <main class="encriptador">
+        <section class="encriptador__contenido__entrada">
+            <textarea class="encriptador__contenido__entrada__texto" id="input" name="" ></textarea>
+            <div class="encriptador__contenido__entrada__aviso">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                    <path fill="currentColor"
+                        d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z" />
+                </svg>
+                <p class="encriptador__contenido__entrada__aviso__texto">No se aceptan mayusculas ni caracteres especiales</p>
+            </div>
+
+            <div class="encriptador__contenido__entrada__botones">
+                <p class="encriptador__contenido__entrada__boton__encriptar" onclick="encrypt()">Encriptar</p>
+                <p class="encriptador__contenido__entrada__boton__desencriptar" onclick="decrypt()">Desencriptar</p>
+            </div>
+        </section>
+
+        <section class="encriptador__contenido__salida">
+            <div id="when-empty-output">
+                <img src="./assets/Muñeco.png" alt="muñeco">
+                <h2>Ningun mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div id="when-theres-output">
+                <p class="encriptador__contenido__salida__texto" id="output"></p>
+                <p class="encriptador__contenido__salida__boton" onclick="copyOutput()">copiar texto salida</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        Desarrollado por Ariel Alejandro Nuñez Mendez 2024
+    </footer>
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>
